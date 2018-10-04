@@ -8,7 +8,7 @@ class TodoItem extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   // 提高组件的性能
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     if (nextProps.content !== this.props.content) {
       return true;
     } else {
