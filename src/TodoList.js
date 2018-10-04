@@ -15,7 +15,7 @@ class TodoList extends Component {
     this.handleItemDelete = this.handleItemDelete.bind(this);
   }
 
-  // 在组件即将被挂载之前执行的方法
+  // 在组件即将被挂载之前执行的方法 只进行一次「ajax 请求」
   componentWillMount() {
     console.log('componentWillMount');
   }

@@ -7,6 +7,14 @@ class TodoItem extends Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
+  // 提高组件的性能
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.content !== this.props.content) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   render() {
     const {content} = this.props;
@@ -17,13 +25,15 @@ class TodoItem extends Component {
       </div>
     );
   }
+
   // 要从父组件接受参数，并且第一次存在于父组件中时不会执行
   componentWillReceiveProps() {
-    console.log('componentWillReceiveProps')
+    console.log('componentWillReceiveProps');
   }
+
   // 从页面中去除
   componentWillUnmount() {
-    console.log('componentWillUnmount')
+    console.log('componentWillUnmount');
   }
 
   handleClick() {
