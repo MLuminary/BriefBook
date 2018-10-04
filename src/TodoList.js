@@ -5,6 +5,7 @@ class TodoList extends Component {
 
   constructor(props) {
     super(props);
+    // 当 state 和 Props  发生改变时， render 会重新执行一次
     this.state = {
       inputValue: '',
       list: []
@@ -14,7 +15,14 @@ class TodoList extends Component {
     this.handleItemDelete = this.handleItemDelete.bind(this);
   }
 
+  // 在组件即将被挂载之前执行的方法
+  componentWillMount() {
+    console.log('componentWillMount');
+  }
+
+  // 组件挂载
   render() {
+    console.log('render');
     return (
       <Fragment>
         <div>
@@ -35,12 +43,33 @@ class TodoList extends Component {
     );
   }
 
+  // 组件被挂载之后执行
+  componentDidMount() {
+    console.log('componentDidMount');
+  }
+
+  // 组件被更新之前会更新
+  shouldComponentUpdate() {
+    console.log('shouldComponentUpdate');
+    // 返回 true 表示组件需要被更新
+    return true;
+  }
+
+  // 组件被更新之前,如果 shouldComponentUpdate 返回 true 才执行
+  componentWillUpdate() {
+    console.log('componentWillUpdate')
+  }
+  //  组件更新完后会执行
+  componentDidUpdate() {
+    console.log('componentDidUpdate')
+  }
+
   getTodoItem() {
     return this.state.list.map((item, index) => {
       return (
         // 传递方法时要将方法的this绑定父组件
         <TodoItem
-          key={index}
+          key={item}
           content={item}
           index={index}
           handleItemDelete={this.handleItemDelete}
