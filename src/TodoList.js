@@ -1,5 +1,15 @@
 import React, {Component, Fragment} from 'react';
-import TodoItem from './TodoItem';
+import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
+import { Input, Button, List } from 'antd';
+// import TodoItem from './TodoItem';
+
+const data = [
+  'Racing car sprays burning fuel into crowd.',
+  'Japanese princess to wed commoner.',
+  'Australian walks 100km after outback crash.',
+  'Man charged over missing wedding girl.',
+  'Los Angeles battles huge wildfires.',
+];
 
 class TodoList extends Component {
 
@@ -27,18 +37,22 @@ class TodoList extends Component {
       <Fragment>
         <div>
           {/*需要用 bind 修改 this, 不然会是 undefined*/}
-          <label htmlFor="insertArea">输入内容</label>
-          <input
+          <Input
+            style={{width: '300px', marginRight: '30px'}}
             id="insertArea"
             className='input'
             value={this.state.inputValue}
             type="text"
             onChange={this.handleInputChange}/>
-          <button onClick={this.handleBtnClick}>提交</button>
+          <Button type="primary" onClick={this.handleBtnClick}>提交</Button>
         </div>
-        <ul>
-          {this.getTodoItem()}
-        </ul>
+        <List
+          style={{width: '300px', marginTop: '30px'}}
+          bordered
+          dataSource={data}
+          renderItem={item => (<List.Item>{item}</List.Item>)}
+        />
+          {/*{this.getTodoItem()}*/}
       </Fragment>
     );
   }
@@ -64,19 +78,19 @@ class TodoList extends Component {
     console.log('componentDidUpdate')
   }
 
-  getTodoItem() {
-    return this.state.list.map((item, index) => {
-      return (
-        // 传递方法时要将方法的this绑定父组件
-        <TodoItem
-          key={item}
-          content={item}
-          index={index}
-          handleItemDelete={this.handleItemDelete}
-        />
-      );
-    });
-  }
+  // getTodoItem() {
+  //   return this.state.list.map((item, index) => {
+  //     return (
+  //       // 传递方法时要将方法的this绑定父组件
+  //       <TodoItem
+  //         key={item}
+  //         content={item}
+  //         index={index}
+  //         handleItemDelete={this.handleItemDelete}
+  //       />
+  //     );
+  //   });
+  // }
 
   handleInputChange(e) {
     // 异步问题

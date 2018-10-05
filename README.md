@@ -88,3 +88,8 @@ componentWillUnmount() {
 console.log('componentWillUnmount')
 }
 ```
+
+## Redux
+
+数据层的框架, 由 Reducer + Flux 组成，用于方便层级结构复杂的组件之间传递数据
+
