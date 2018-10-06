@@ -14,7 +14,7 @@ const TodoListUI = (props) => {
           value={props.inputValue}
           type="text"
           onChange={props.handleInputChange}/>
-        <Button type="primary" onClick={props.handleBtnClick()}>提交</Button>
+        <Button type="primary" onClick={props.handleBtnClick}>提交</Button>
       </div>
       <List
         style={{width: '300px', marginTop: '10px'}}
