@@ -93,3 +93,8 @@ console.log('componentWillUnmount')
 
 数据层的框架, 由 Reducer + Flux 组成，用于方便层级结构复杂的组件之间传递数据
 
+设计时有三个基本原则
+
+- store 是唯一的
+- 只有 store 能改变自己的内容
+- Reducer 必须是纯函数 「给固定的输入会有固定的输出, 而且不会有任何副作用」
