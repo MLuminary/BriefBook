@@ -1,8 +1,8 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 import store from './store';
-import {Input, Button, List} from 'antd';
 import {getInputChangeAction, getAddItemAction, getDeleteItemAction} from './store/actionCreators';
+import TodoListUI from './TodoListUI';
 
 // import TodoItem from './TodoItem';
 
@@ -14,7 +14,7 @@ class TodoList extends Component {
     this.state = store.getState();
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleBtnClick = this.handleBtnClick.bind(this);
-    // this.handleItemDelete = this.handleItemDelete.bind(this);
+    this.handleItemDelete = this.handleItemDelete.bind(this);
     this.handleStoreChange = this.handleStoreChange.bind(this);
     // 感知 store 的变化
     store.subscribe(this.handleStoreChange);
@@ -28,29 +28,13 @@ class TodoList extends Component {
   // 组件挂载
   render() {
     console.log('render');
-    return (
-      <Fragment>
-        <div>
-          {/*需要用 bind 修改 this, 不然会是 undefined*/}
-          <Input
-            style={{width: '300px', margin: '30px'}}
-            id="insertArea"
-            className='input'
-            value={this.state.inputValue}
-            type="text"
-            onChange={this.handleInputChange}/>
-          <Button type="primary" onClick={this.handleBtnClick}>提交</Button>
-        </div>
-        <List
-          style={{width: '300px', marginLeft: '30px'}}
-          bordered
-          dataSource={this.state.list}
-          renderItem={(item, index) => (
-            <List.Item onClick={this.handleItemDelete.bind(this, index)}>{item}</List.Item>)}
-        />
-        {/*{this.getTodoItem()}*/}
-      </Fragment>
-    );
+    return <TodoListUI
+      inputValue={this.state.inputValue}
+      list={this.state.list}
+      handleInputChange={this.handleInputChange}
+      handleBtnClick={this.handleBtnClick}
+      handleItemDelete={this.handleItemDelete}
+    />;
   }
 
   // 组件被挂载之后执行
