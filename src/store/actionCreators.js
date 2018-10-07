@@ -1,4 +1,5 @@
 import {CHANGE_INPUT_VALUE, ADD_TODO_ITEM, DELETE_TODO_ITEM, INIT_LIST_ACTION} from './actionTypes';
+import axios from 'axios/index';
 
 // ACTION 统一管理
 
@@ -24,3 +25,13 @@ export const getInitlISTAction = data => ({
   data
 });
 
+// 获得数据
+export const getTodoList = () => {
+  return (dispatch) => {
+    axios.get('http://localhost:8080/list').then(res => {
+      const data = res.data;
+      const action = getInitlISTAction(data);
+      dispatch(action);
+    });
+  }
+}

@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 import store from './store';
-import {getInputChangeAction, getAddItemAction, getDeleteItemAction, getInitlISTAction} from './store/actionCreators';
+import {
+  getInputChangeAction,
+  getAddItemAction,
+  getDeleteItemAction,
+  getTodoList
+} from './store/actionCreators';
 import TodoListUI from './TodoListUI';
-import axios from 'axios';
 
 // import TodoItem from './TodoItem';
 
@@ -40,12 +44,8 @@ class TodoList extends Component {
 
   // 组件被挂载之后执行
   componentDidMount() {
-    axios.get('http://localhost:8080/list').then(res => {
-      const data = res.data;
-      const action = getInitlISTAction(data);
-      store.dispatch(action);
-    });
-
+    const action = getTodoList();
+    store.dispatch(action);
     console.log('componentDidMount');
   }
 

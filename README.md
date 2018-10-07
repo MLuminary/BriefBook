@@ -98,3 +98,7 @@ console.log('componentWillUnmount')
 - store 是唯一的
 - 只有 store 能改变自己的内容
 - Reducer 必须是纯函数 「给固定的输入会有固定的输出, 而且不会有任何副作用」
+
+## Redux-thunk
+
+其实就是对 disptach 进行升级，可以识别函数和对象并执行相应的操作, 将异步逻辑放在 actionCreator 文件中
