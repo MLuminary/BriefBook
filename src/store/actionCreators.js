@@ -1,5 +1,5 @@
-import {CHANGE_INPUT_VALUE, ADD_TODO_ITEM, DELETE_TODO_ITEM, INIT_LIST_ACTION} from './actionTypes';
-import axios from 'axios/index';
+import {CHANGE_INPUT_VALUE, ADD_TODO_ITEM, DELETE_TODO_ITEM, INIT_LIST_ACTION, GET_INIT_LIST} from './actionTypes';
+
 
 // ACTION 统一管理
 
@@ -25,13 +25,17 @@ export const getInitlISTAction = data => ({
   data
 });
 
-// 获得数据
-export const getTodoList = () => {
-  return (dispatch) => {
-    axios.get('http://localhost:8080/list').then(res => {
-      const data = res.data;
-      const action = getInitlISTAction(data);
-      dispatch(action);
-    });
-  }
-}
+export const getInitList = () => ({
+  type: GET_INIT_LIST
+});
+
+// 获得数据 redux-thunk
+// export const getTodoList = () => {
+//   return (dispatch) => {
+//     axios.get('http://localhost:8080/list').then(res => {
+//       const data = res.data;
+//       const action = getInitlISTAction(data);
+//       dispatch(action);
+//     });
+//   }
+// }

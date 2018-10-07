@@ -5,7 +5,7 @@ import {
   getInputChangeAction,
   getAddItemAction,
   getDeleteItemAction,
-  getTodoList
+  getInitList,
 } from './store/actionCreators';
 import TodoListUI from './TodoListUI';
 
@@ -44,7 +44,7 @@ class TodoList extends Component {
 
   // 组件被挂载之后执行
   componentDidMount() {
-    const action = getTodoList();
+    const action = getInitList();
     store.dispatch(action);
     console.log('componentDidMount');
   }
