@@ -101,4 +101,4 @@ console.log('componentWillUnmount')
 
 ## Redux-thunk
 
-其实就是对 disptach 进行升级，可以识别函数和对象并执行相应的操作, 将异步逻辑放在 actionCreator 文件中
+其实就是对 disptach 进行升级，可以识别函数和对象并执行相应的操作, 将异步逻辑放在 actionCreator 文件中.
