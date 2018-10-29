@@ -1,16 +1,24 @@
-import React, {Component, Fragment} from 'react';
-import {CSSTransition} from 'react-transition-group';
+import React, {Component} from 'react'
+import {GlobalStyle} from './style'
+import {GlobalIconFont} from './statics/iconfont/iconfont'
+
+import Header from './common/header'
+
+import store from './store'
+import {Provider} from 'react-redux'
 
 class App extends Component {
-  render() {
-    return (
-      <Fragment>
-        <CSSTransition>
-          <h1>hello world</h1>
-        </CSSTransition>
-      </Fragment>
-    );
-  }
+	render() {
+		return (
+			<Provider store={store}>
+				<div>
+					<GlobalIconFont/>
+					<GlobalStyle/>
+					<Header/>
+				</div>
+			</Provider>
+		)
+	}
 }
 
-export default App;
+export default App
