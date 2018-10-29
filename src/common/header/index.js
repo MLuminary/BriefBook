@@ -48,7 +48,7 @@ const Header = (props) => {
 // 获取 props
 const mapStateToProps = (state) => {
 	return {
-		focused: state.header.focused
+		focused: state.get('header').get('focused')
 	}
 }
 

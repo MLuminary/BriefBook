@@ -5,5 +5,5 @@ export const searchFoucus = () => ({
 })
 
 export const searchBlur = () => ({
-	type: constants.sEARCH_BLUR
+	type: constants.SEARCH_BLUR
 })
