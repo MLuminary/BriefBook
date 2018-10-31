@@ -2,7 +2,8 @@ import * as constants from './constants'
 import { fromJS } from 'immutable'
 
 const defaultSate = fromJS({
-	focused: false
+	focused: false,
+	hotKeyList: []
 })
 
 export default (state = defaultSate, action) => {
@@ -13,6 +14,10 @@ export default (state = defaultSate, action) => {
 
 	if (action.type === constants.SEARCH_BLUR) {
 		return state.set('focused', false)
+	}
+
+	if (action.type === constants.GET_HOTKEY_LIST) {
+		return state.set('hotKeyList', action.data)
 	}
 	return state;
 }
