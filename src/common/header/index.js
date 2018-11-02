@@ -78,7 +78,7 @@ class Header extends Component {
 						>
 							<NavSearch
 								className={this.props.focused ? 'focused' : ''}
-								onFocus={this.props.handleInputFocus}
+								onFocus={() => this.props.handleInputFocus(this.props.hotKeyList)}
 								onBlur={this.props.handleInputBlur}>
 
 							</NavSearch>
@@ -128,9 +128,9 @@ const mapStateToProps = (state) => {
 // dispatch action
 const MapDispatchToProps = (dispatch) => {
 	return {
-		handleInputFocus() {
+		handleInputFocus(hotKeyList) {
+			(hotKeyList.size === 0) && dispatch(actionCreators.getHotKeyList())
 			dispatch(actionCreators.searchFocus())
-			dispatch(actionCreators.getHotKeyList())
 		},
 		handleInputBlur() {
 			dispatch(actionCreators.searchBlur())

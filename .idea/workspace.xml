@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="27024902-7428-437a-be06-c6281afbf2a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/common/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/header/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/header/store/reducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +42,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="10" />
-          <entry key="js" value="6916" />
+          <entry key="js" value="7036" />
           <entry key="json" value="24" />
           <entry key="txt" value="183" />
         </counts>
@@ -52,7 +51,7 @@
         <counts>
           <entry key="HTML" value="10" />
           <entry key="JSON" value="24" />
-          <entry key="JavaScript" value="6916" />
+          <entry key="JavaScript" value="7036" />
           <entry key="PLAIN_TEXT" value="183" />
         </counts>
       </usages-collector>
@@ -69,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/common/header/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="105" column="63" selection-start-line="105" selection-start-column="63" selection-end-line="105" selection-end-column="63" />
+            <state relative-caret-position="463">
+              <caret line="133" selection-start-line="133" selection-end-line="133" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -279,7 +278,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540034973696</updated>
-      <workItem from="1540034974841" duration="55972000" />
+      <workItem from="1540034974841" duration="56508000" />
     </task>
     <task id="LOCAL-00001" summary="TodoList 完成">
       <created>1540049602024</created>
@@ -327,7 +326,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55972000" />
+    <option name="totallyTimeSpent" value="56508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1632" height="1027" extended-state="0" />
@@ -597,8 +596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/header/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="105" column="63" selection-start-line="105" selection-start-column="63" selection-end-line="105" selection-end-column="63" />
+        <state relative-caret-position="463">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
