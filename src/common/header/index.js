@@ -24,20 +24,29 @@ class Header extends Component {
 
 	// 热门搜索样式
 	getListArea() {
-		const {focused, hotKeyList} = this.props
-		if (focused) {
+		const {focused, hotKeyList, mouseIn, page, handleMouseIn, handleMouseOut, handlePage} = this.props
+		const newList = hotKeyList.toJS()
+		const pageList = []
+
+		if (newList.length) {
+			for (let i = (page - 1) * 10; i < page * 10; i++) {
+				if (newList[i]) {
+					pageList.push(
+						<SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
+					)
+				}
+			}
+		}
+
+		if (focused || mouseIn) {
 			return (
-				<SearchInfo>
+				<SearchInfo onMouseEnter={handleMouseIn} onMouseLeave={handleMouseOut}>
 					<SearchInfoTitle>
 						热门搜索
-						<SearchInfoSwitch>换一批</SearchInfoSwitch>
+						<SearchInfoSwitch onClick={() => handlePage(page)}>换一批</SearchInfoSwitch>
 					</SearchInfoTitle>
 					<SearchInfoList>
-						{
-							hotKeyList.map((item) => {
-								return <SearchInfoItem key={item}>{item}</SearchInfoItem>
-							})
-						}
+						{pageList}
 					</SearchInfoList>
 				</SearchInfo>
 			)
@@ -93,7 +102,9 @@ class Header extends Component {
 const mapStateToProps = (state) => {
 	return {
 		focused: state.get('header').get('focused'),
-		hotKeyList: state.getIn(['header','hotKeyList'])
+		hotKeyList: state.getIn(['header','hotKeyList']),
+		mouseIn: state.getIn(['header', 'mouseIn']),
+		page: state.getIn(['header', 'page'])
 	}
 }
 
@@ -106,6 +117,15 @@ const MapDispatchToProps = (dispatch) => {
 		},
 		handleInputBlur() {
 			dispatch(actionCreators.searchBlur())
+		},
+		handleMouseIn() {
+			dispatch(actionCreators.mouseIn())
+		},
+		handleMouseOut() {
+			dispatch(actionCreators.mouseOut())
+		},
+		handlePage(page) {
+			dispatch(actionCreators.changePage(page))
 		}
 	}
 }
