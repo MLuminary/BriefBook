@@ -36,7 +36,6 @@ export default (state = defaultSate, action) => {
 
 	if (action.type === constants.CHANGE_PAGE) {
 		const { totalPage } = state.toJS()
-		console.log(state.toJS())
 		if (action.data < totalPage) {
 			return state.set('page', action.data + 1)
 		} else {

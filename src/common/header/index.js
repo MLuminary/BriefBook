@@ -43,7 +43,10 @@ class Header extends Component {
 				<SearchInfo onMouseEnter={handleMouseIn} onMouseLeave={handleMouseOut}>
 					<SearchInfoTitle>
 						热门搜索
-						<SearchInfoSwitch onClick={() => handlePage(page)}>换一批</SearchInfoSwitch>
+						<SearchInfoSwitch onClick={() => handlePage(page, this.spin)}>
+							<i ref={(icon) => this.spin = icon} className="iconfont spin">&#xe851;</i>
+							换一批
+						</SearchInfoSwitch>
 					</SearchInfoTitle>
 					<SearchInfoList>
 						{pageList}
@@ -98,6 +101,20 @@ class Header extends Component {
 	}
 }
 
+// 换一换标签动画
+const exchangeRotate = (spin) => {
+	let originRotate = spin.style.transform.replace(/[^0-9]/ig, '')
+	console.log(originRotate)
+
+	if (originRotate) {
+		originRotate = parseInt(originRotate, 10) + 360
+	} else {
+		originRotate = 0
+	}
+
+	spin.style.transform = `rotate(${originRotate}deg)`
+}
+
 // 获取 props
 const mapStateToProps = (state) => {
 	return {
@@ -124,7 +141,8 @@ const MapDispatchToProps = (dispatch) => {
 		handleMouseOut() {
 			dispatch(actionCreators.mouseOut())
 		},
-		handlePage(page) {
+		handlePage(page, spin) {
+			exchangeRotate(spin)
 			dispatch(actionCreators.changePage(page))
 		}
 	}
