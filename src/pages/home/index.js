@@ -1,4 +1,7 @@
 import React , {Component} from 'react'
+import { connect } from 'react-redux'
+
+import { actionCreators } from './store'
 
 import { HomeWrapper, HomeLeft, HomeRight } from './style'
 
@@ -25,6 +28,15 @@ class Home extends Component {
 		)
 	}
 
+	componentDidMount() {
+		this.props.initHomeData()
+	}
 }
 
-export default Home
+const mapDispatchToProps = (dispatch) => ({
+	initHomeData() {
+		dispatch(actionCreators.initHomeData())
+	}
+})
+
+export default connect(null, mapDispatchToProps)(Home)
