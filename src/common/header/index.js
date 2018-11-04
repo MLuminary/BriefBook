@@ -104,8 +104,6 @@ class Header extends Component {
 // 换一换标签动画
 const exchangeRotate = (spin) => {
 	let originRotate = spin.style.transform.replace(/[^0-9]/ig, '')
-	console.log(originRotate)
-
 	if (originRotate) {
 		originRotate = parseInt(originRotate, 10) + 360
 	} else {
