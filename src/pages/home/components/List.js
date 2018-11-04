@@ -1,6 +1,7 @@
 import React , {Component} from 'react'
 import { connect } from 'react-redux'
-import { ListItem, ListInfo } from '../style'
+import { ListItem, ListInfo, LoadMore} from '../style'
+import { actionCreators } from '../store'
 
 class List extends Component {
 
@@ -9,9 +10,9 @@ class List extends Component {
 		return (
 			<div>
 				{
-					list.map(item => {
+					list.map((item, index) => {
 						return (
-							<ListItem key={item.get('id')}>
+							<ListItem key={index}>
 								<img className='pic' src={item.get('imgUrl')} alt="pic"/>
 								<ListInfo>
 									<h3 className='title'>{item.get('title')}</h3>
@@ -21,6 +22,7 @@ class List extends Component {
 						)
 					})
 				}
+				<LoadMore onClick={this.props.getMoreList}>更多文字</LoadMore>
 			</div>
 		)
 	}
@@ -33,4 +35,10 @@ const mapStateToProps = (state) => {
 	}
 }
 
-export default connect(mapStateToProps, null)(List)
+const mapDispatchToProps = (dispatch) => ({
+	getMoreList() {
+		dispatch(actionCreators.getMoreList())
+	}
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(List)

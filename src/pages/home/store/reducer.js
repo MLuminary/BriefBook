@@ -1,5 +1,5 @@
 import { fromJS } from 'immutable'
-import { INIT_HOME_DATA } from './constants'
+import { INIT_HOME_DATA, ADD_HOME_LIST } from './constants'
 
 const defaultState = fromJS({
 	hotSpecial: [],
@@ -14,6 +14,9 @@ export default (state = defaultState, action) => {
 			articleList: action.articleList,
 			recommendList: action.recommendList
 		})
+	}
+	if (action.type === ADD_HOME_LIST) {
+		return state.set('articleList', state.get('articleList').concat(action.data))
 	}
 	return state
 }
