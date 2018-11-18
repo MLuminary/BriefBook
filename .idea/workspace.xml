@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27024902-7428-437a-be06-c6281afbf2a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/components/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/components/Recommend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/Recommend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/components/Topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/Topic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/components/Writer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/Writer.js" afterDir="false" />
-    </list>
+    <list default="true" id="27024902-7428-437a-be06-c6281afbf2a4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -23,6 +15,7 @@
     <session id="-1964046582">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -50,7 +43,7 @@
           <entry key="html" value="10" />
           <entry key="js" value="10730" />
           <entry key="json" value="24" />
-          <entry key="txt" value="183" />
+          <entry key="txt" value="213" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -58,7 +51,7 @@
           <entry key="HTML" value="10" />
           <entry key="JSON" value="24" />
           <entry key="JavaScript" value="10730" />
-          <entry key="PLAIN_TEXT" value="183" />
+          <entry key="PLAIN_TEXT" value="213" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -154,8 +147,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+            <state relative-caret-position="510">
+              <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -256,10 +249,10 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="23" />
-    <option name="width" value="1632" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1808" />
+    <option name="y" value="288" />
+    <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectView">
@@ -354,7 +347,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540034973696</updated>
-      <workItem from="1540034974841" duration="68297000" />
+      <workItem from="1540034974841" duration="69113000" />
     </task>
     <task id="LOCAL-00001" summary="TodoList 完成">
       <created>1540049602024</created>
@@ -398,19 +391,26 @@
       <option name="project" value="LOCAL" />
       <updated>1540999719025</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="purcomponet 理解 和 路由跳转">
+      <created>1541428562823</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1541428562823</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68297000" />
+    <option name="totallyTimeSpent" value="69113000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="23" width="1632" height="1027" extended-state="0" />
+    <frame x="-1" y="23" width="1632" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1754717" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.1754717" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -425,7 +425,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Terminal" order="3" visible="true" weight="0.19559748" />
+      <window_info active="true" anchor="right" id="Terminal" order="3" visible="true" weight="0.19559748" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +441,8 @@
     <MESSAGE value="actionCreators 与 constants 拆分" />
     <MESSAGE value="immutable 管理 state" />
     <MESSAGE value="redux-thunk axios 实现 热门关键词" />
-    <option name="LAST_COMMIT_MESSAGE" value="redux-thunk axios 实现 热门关键词" />
+    <MESSAGE value="purcomponet 理解 和 路由跳转" />
+    <option name="LAST_COMMIT_MESSAGE" value="purcomponet 理解 和 路由跳转" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package-lock.json">
@@ -774,8 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="510">
+          <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
